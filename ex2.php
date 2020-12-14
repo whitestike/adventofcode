@@ -1016,7 +1016,7 @@ for ($i = 0; $i < count($inputArray); $i += 3) {
 
     $count = 0;
 
-    if ($password[$minMax[0] + 1] == $checkLetter || $password[$minMax[1] + 1] == $checkLetter) {
+    if (($password[$minMax[0] - 1] != $checkLetter || $password[$minMax[1]  - 1] == $checkLetter) || ($password[$minMax[0] - 1] == $checkLetter || $password[$minMax[1]  - 1] != $checkLetter)) {
 
         $goodCount++;
     }
